@@ -61,6 +61,7 @@
     .step.active { border-color:rgba(157,124,255,.62); background:linear-gradient(120deg,rgba(157,124,255,.11),rgba(255,255,255,.025)); }
     .step.complete { border-color:rgba(118,224,176,.27); }
     .step.locked { opacity:.56; }
+    .step.locked .step-actions a { pointer-events:none; }
     .step-top { display:flex; align-items:flex-start; gap:12px; }
     .step-number { flex:0 0 30px; display:grid; place-items:center; width:30px; height:30px; border-radius:10px; color:#d9ceff; background:rgba(157,124,255,.15); font-size:.82rem; font-weight:800; }
     .step.complete .step-number { color:#09291e; background:var(--green); }
@@ -133,16 +134,6 @@
     </header>
 
     <main>
-      <section class="hero" aria-labelledby="page-title">
-        <span class="eyebrow">Acesso aos arquivos</span>
-        <h1 id="page-title">Complete as etapas e veja os dados de acesso.</h1>
-        <p class="lead">Abra os links abaixo e avance uma etapa por vez. Cada etapa tem uma espera de 10 segundos.</p>
-        <div class="summary" aria-label="Resumo">
-          <span class="pill"><strong>4 etapas</strong> em sequência</span>
-          <span class="pill"><strong>10 segundos</strong> por etapa</span>
-        </div>
-      </section>
-
       <div class="layout">
         <section class="steps-card" aria-labelledby="steps-title">
           <div class="card-head">
@@ -154,38 +145,24 @@
           </div>
           <div class="step-list" id="step-list">
             <article class="step active" data-step="0">
-              <div class="step-top"><span class="step-number">01</span><div><h3>Acompanhe o canal</h3><p>Visite o canal do ISAC MODS TV.</p></div></div>
-              <div class="step-actions"><a class="button" href="https://youtube.com/@isacmodstvofcbr?si=cbnsHHr12tPjRJri" target="_blank" rel="noopener noreferrer" data-open="0">Abrir canal <span aria-hidden="true">↗</span></a><span class="timer" id="timer-0" aria-live="polite">Aguarde <strong>10</strong> s</span><button class="button secondary" type="button" data-confirm="0" disabled>Confirmar etapa</button></div>
+              <div class="step-top"><span class="step-number">01</span><div><h3>Siga o canal ISAC MODS TV</h3><p>Inscreva-se no canal para acompanhar os próximos conteúdos.</p></div></div>
+              <div class="step-actions"><a class="button" href="https://youtube.com/@isacmodstvofcbr?si=cbnsHHr12tPjRJri" target="_blank" rel="noopener noreferrer">Abrir canal <span aria-hidden="true">↗</span></a><span class="timer" id="timer-0" aria-live="polite">Próxima etapa em <strong>10</strong> s</span></div>
             </article>
             <article class="step locked" data-step="1" aria-disabled="true">
-              <div class="step-top"><span class="step-number">02</span><div><h3>Curta o primeiro vídeo</h3><p>Abra o vídeo indicado e, se desejar, deixe seu like.</p></div></div>
-              <div class="step-actions"><a class="button secondary" href="https://youtu.be/EHgSz0HX8A8?is=dQMn1tE22q8RmNg1" target="_blank" rel="noopener noreferrer" data-open="1" tabindex="-1">Abrir vídeo <span aria-hidden="true">↗</span></a><span class="timer" id="timer-1">Aguarde <strong>10</strong> s</span><button class="button secondary" type="button" data-confirm="1" disabled>Confirmar etapa</button></div>
+              <div class="step-top"><span class="step-number">02</span><div><h3>Deixe like neste vídeo</h3><p>Curta o primeiro vídeo indicado.</p></div></div>
+              <div class="step-actions"><a class="button secondary" href="https://youtu.be/EHgSz0HX8A8?is=dQMn1tE22q8RmNg1" target="_blank" rel="noopener noreferrer" tabindex="-1">Abrir vídeo <span aria-hidden="true">↗</span></a><span class="timer" id="timer-1">Próxima etapa em <strong>10</strong> s</span></div>
             </article>
             <article class="step locked" data-step="2" aria-disabled="true">
-              <div class="step-top"><span class="step-number">03</span><div><h3>Comente no primeiro vídeo</h3><p>Volte ao vídeo e, se quiser, deixe um comentário.</p></div></div>
-              <div class="step-actions"><a class="button secondary" href="https://youtu.be/EHgSz0HX8A8?is=dQMn1tE22q8RmNg1" target="_blank" rel="noopener noreferrer" data-open="2" tabindex="-1">Abrir vídeo <span aria-hidden="true">↗</span></a><span class="timer" id="timer-2">Aguarde <strong>10</strong> s</span><button class="button secondary" type="button" data-confirm="2" disabled>Confirmar etapa</button></div>
+              <div class="step-top"><span class="step-number">03</span><div><h3>Comente neste vídeo</h3><p>Deixe um comentário no primeiro vídeo.</p></div></div>
+              <div class="step-actions"><a class="button secondary" href="https://youtu.be/EHgSz0HX8A8?is=dQMn1tE22q8RmNg1" target="_blank" rel="noopener noreferrer" tabindex="-1">Abrir vídeo <span aria-hidden="true">↗</span></a><span class="timer" id="timer-2">Próxima etapa em <strong>10</strong> s</span></div>
             </article>
             <article class="step locked" data-step="3" aria-disabled="true">
-              <div class="step-top"><span class="step-number">04</span><div><h3>Curta o segundo vídeo</h3><p>Abra o segundo vídeo indicado.</p></div></div>
-              <div class="step-actions"><a class="button secondary" href="https://youtu.be/uI0Gu9W3r2k?is=MuzbybfFiy8e9hjq" target="_blank" rel="noopener noreferrer" data-open="3" tabindex="-1">Abrir vídeo <span aria-hidden="true">↗</span></a><span class="timer" id="timer-3">Aguarde <strong>10</strong> s</span><button class="button secondary" type="button" data-confirm="3" disabled>Confirmar etapa</button></div>
+              <div class="step-top"><span class="step-number">04</span><div><h3>Deixe like neste vídeo</h3><p>Curta o segundo vídeo indicado.</p></div></div>
+              <div class="step-actions"><a class="button secondary" href="https://youtu.be/uI0Gu9W3r2k?is=MuzbybfFiy8e9hjq" target="_blank" rel="noopener noreferrer" tabindex="-1">Abrir vídeo <span aria-hidden="true">↗</span></a><span class="timer" id="timer-3">Próxima etapa em <strong>10</strong> s</span></div>
             </article>
           </div>
           <p class="sr-only" id="live-status" aria-live="polite"></p>
         </section>
-
-        <aside class="side-card">
-          <div>
-            <h2>Como funciona</h2>
-            <p>Abra o link da etapa ativa. Depois da contagem de 10 segundos, confirme para liberar a próxima.</p>
-          </div>
-          <div class="side-divider"></div>
-          <div class="safety">
-            <span class="safety-icon" aria-hidden="true">ⓘ</span>
-            <p class="disclaimer">A página não consegue verificar inscrições, likes ou comentários. O avanço depende da sua confirmação e não comprova que uma ação foi realizada.</p>
-          </div>
-          <div class="side-divider"></div>
-          <p class="disclaimer">O link de download é externo. O arquivo não é hospedado nem verificado por esta página.</p>
-        </aside>
       </div>
 
       <section class="access-card" id="access-card" aria-labelledby="access-title" aria-hidden="true">
@@ -208,10 +185,8 @@
           <div class="detail"><span>Vendedor</span><strong>ISAC MENU</strong></div>
         </div>
         <a class="button download" href="https://www.mediafire.com/file/kxm5xilrdn6gq63/RIO+RISE+GG+INJECTOR.zip/file" target="_blank" rel="noopener noreferrer">Abrir download no MediaFire <span aria-hidden="true">↗</span></a>
-        <p class="external-note">O download abre um site de terceiros. Verifique o arquivo com ferramentas de segurança antes de executar e confirme que ele é confiável.</p>
       </section>
     </main>
-    <footer>Links do YouTube e do MediaFire abrem em outra aba. A liberação desta página é apenas visual e não é um controle de acesso seguro.</footer>
   </div>
 
   <script>
@@ -226,69 +201,52 @@
       const liveStatus = document.getElementById('live-status');
       let activeStep = 0;
       let timerId = null;
-      let secondsLeft = duration;
-      let timerStarted = false;
 
       const updateProgress = () => {
-        progressLabel.textContent = activeStep < total ? `Etapa ${activeStep + 1} de ${total}` : '4 de 4 concluídas';
-        const done = activeStep === total ? total : activeStep;
-        progressFill.style.width = `${(done / total) * 100}%`;
-        progressbar.setAttribute('aria-valuenow', String(done));
+        progressLabel.textContent = activeStep < total ? `Etapa ${activeStep + 1} de ${total}` : 'Acesso liberado';
+        progressFill.style.width = `${(activeStep / total) * 100}%`;
+        progressbar.setAttribute('aria-valuenow', String(activeStep));
       };
 
-      const startTimer = (index) => {
-        if (index !== activeStep || timerStarted) return;
-        timerStarted = true;
-        secondsLeft = duration;
+      const activateStep = (index) => {
+        if (index >= total) {
+          accessCard.classList.add('show');
+          accessCard.setAttribute('aria-hidden', 'false');
+          liveStatus.textContent = 'Etapas concluídas. Os dados de acesso foram exibidos.';
+          accessCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          updateProgress();
+          return;
+        }
+
+        activeStep = index;
+        const step = steps[index];
+        step.classList.remove('locked');
+        step.classList.add('active');
+        step.removeAttribute('aria-disabled');
+        const link = step.querySelector('a');
+        link.removeAttribute('tabindex');
+        link.classList.remove('secondary');
+        updateProgress();
+        liveStatus.textContent = `Etapa ${index + 1} liberada. Faça a ação indicada; a próxima etapa começa em 10 segundos.`;
+
+        let secondsLeft = duration;
         const timerLabel = document.getElementById(`timer-${index}`);
-        const confirm = document.querySelector(`[data-confirm="${index}"]`);
-        timerLabel.innerHTML = `Aguarde <strong>${secondsLeft}</strong> s`;
-        liveStatus.textContent = `Contagem de 10 segundos iniciada para a etapa ${index + 1}.`;
+        timerLabel.innerHTML = `Próxima etapa em <strong>${secondsLeft}</strong> s`;
         timerId = window.setInterval(() => {
           secondsLeft -= 1;
           if (secondsLeft > 0) {
-            timerLabel.innerHTML = `Aguarde <strong>${secondsLeft}</strong> s`;
-          } else {
-            window.clearInterval(timerId);
-            timerId = null;
-            timerLabel.textContent = 'Tempo concluído';
-            confirm.disabled = false;
-            confirm.classList.remove('secondary');
-            liveStatus.textContent = `Tempo concluído. Confirme a etapa ${index + 1} para continuar.`;
+            timerLabel.innerHTML = `Próxima etapa em <strong>${secondsLeft}</strong> s`;
+            return;
           }
+          window.clearInterval(timerId);
+          timerId = null;
+          step.classList.remove('active');
+          step.classList.add('complete');
+          step.querySelector('.step-number').textContent = '✓';
+          timerLabel.textContent = 'Concluída';
+          activateStep(index + 1);
         }, 1000);
       };
-
-      document.querySelectorAll('[data-open]').forEach((link) => {
-        link.addEventListener('click', () => startTimer(Number(link.dataset.open)));
-      });
-
-      document.querySelectorAll('[data-confirm]').forEach((button) => {
-        button.addEventListener('click', () => {
-          const index = Number(button.dataset.confirm);
-          if (index !== activeStep || button.disabled) return;
-          button.disabled = true;
-          button.textContent = 'Concluída';
-          steps[index].classList.remove('active');
-          steps[index].classList.add('complete');
-          steps[index].querySelector('.step-number').textContent = '✓';
-          activeStep += 1;
-          timerStarted = false;
-          if (activeStep < total) {
-            steps[activeStep].classList.remove('locked');
-            steps[activeStep].classList.add('active');
-            steps[activeStep].removeAttribute('aria-disabled');
-            steps[activeStep].querySelectorAll('a').forEach((a) => a.removeAttribute('tabindex'));
-            liveStatus.textContent = `Etapa ${activeStep} concluída. Etapa ${activeStep + 1} liberada.`;
-          } else {
-            accessCard.classList.add('show');
-            accessCard.setAttribute('aria-hidden', 'false');
-            liveStatus.textContent = 'Todas as etapas concluídas. Os dados de acesso foram exibidos.';
-            accessCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          }
-          updateProgress();
-        });
-      });
 
       document.getElementById('copy-key').addEventListener('click', async (event) => {
         const button = event.currentTarget;
@@ -305,7 +263,7 @@
           selection.addRange(range);
         }
       });
-      updateProgress();
+      activateStep(0);
     })();
   </script>
 </body>
