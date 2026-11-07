@@ -60,7 +60,7 @@
     .step { position:relative; padding:16px; border:1px solid var(--line); border-radius:16px; background:rgba(255,255,255,.025); transition:border-color .2s, background .2s, transform .2s; }
     .step.active { border-color:rgba(157,124,255,.62); background:linear-gradient(120deg,rgba(157,124,255,.11),rgba(255,255,255,.025)); }
     .step.complete { border-color:rgba(118,224,176,.27); }
-    .step.locked { opacity:.56; }
+    .step.locked { display:none; }
     .step.locked .step-actions a { pointer-events:none; }
     .step-top { display:flex; align-items:flex-start; gap:12px; }
     .step-number { flex:0 0 30px; display:grid; place-items:center; width:30px; height:30px; border-radius:10px; color:#d9ceff; background:rgba(157,124,255,.15); font-size:.82rem; font-weight:800; }
@@ -138,27 +138,31 @@
         <section class="steps-card" aria-labelledby="steps-title">
           <div class="card-head">
             <h2 id="steps-title">Etapas para continuar</h2>
-            <span class="progress-label" id="progress-label">Etapa 1 de 4</span>
+            <span class="progress-label" id="progress-label">Etapa 1 de 5</span>
           </div>
-          <div class="progress-track" role="progressbar" aria-label="Progresso das etapas" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0" id="progressbar">
+          <div class="progress-track" role="progressbar" aria-label="Progresso das etapas" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0" id="progressbar">
             <div class="progress-fill" id="progress-fill"></div>
           </div>
           <div class="step-list" id="step-list">
             <article class="step active" data-step="0">
               <div class="step-top"><span class="step-number">01</span><div><h3>Siga o canal ISAC MODS TV</h3><p>Inscreva-se no canal para acompanhar os próximos conteúdos.</p></div></div>
-              <div class="step-actions"><a class="button" href="https://youtube.com/@isacmodstvofcbr?si=cbnsHHr12tPjRJri" target="_blank" rel="noopener noreferrer">Abrir canal <span aria-hidden="true">↗</span></a><span class="timer" id="timer-0" aria-live="polite">Próxima etapa em <strong>10</strong> s</span></div>
+              <div class="step-actions"><a class="button" href="https://youtube.com/@isacmodstvofcbr?si=cbnsHHr12tPjRJri" target="_blank" rel="noopener noreferrer">Abrir canal <span aria-hidden="true">↗</span></a><span class="timer" id="timer-0" aria-live="polite">Aguarde <strong>10</strong> s</span><button class="button secondary" type="button" data-next="0" disabled>Continuar</button></div>
             </article>
             <article class="step locked" data-step="1" aria-disabled="true">
-              <div class="step-top"><span class="step-number">02</span><div><h3>Deixe like neste vídeo</h3><p>Curta o primeiro vídeo indicado.</p></div></div>
-              <div class="step-actions"><a class="button secondary" href="https://youtu.be/EHgSz0HX8A8?is=dQMn1tE22q8RmNg1" target="_blank" rel="noopener noreferrer" tabindex="-1">Abrir vídeo <span aria-hidden="true">↗</span></a><span class="timer" id="timer-1">Próxima etapa em <strong>10</strong> s</span></div>
+              <div class="step-top"><span class="step-number">02</span><div><h3>Entre no grupo do WhatsApp</h3><p>Acesse o link para entrar no grupo.</p></div></div>
+              <div class="step-actions"><a class="button secondary" href="https://chat.whatsapp.com/H6weaa0g3KjLPAWyqgXDh8?s=cl&amp;p=a&amp;iam=2" target="_blank" rel="noopener noreferrer" tabindex="-1">Abrir grupo <span aria-hidden="true">↗</span></a><span class="timer" id="timer-1">Aguarde <strong>10</strong> s</span><button class="button secondary" type="button" data-next="1" disabled>Continuar</button></div>
             </article>
             <article class="step locked" data-step="2" aria-disabled="true">
-              <div class="step-top"><span class="step-number">03</span><div><h3>Comente neste vídeo</h3><p>Deixe um comentário no primeiro vídeo.</p></div></div>
-              <div class="step-actions"><a class="button secondary" href="https://youtu.be/EHgSz0HX8A8?is=dQMn1tE22q8RmNg1" target="_blank" rel="noopener noreferrer" tabindex="-1">Abrir vídeo <span aria-hidden="true">↗</span></a><span class="timer" id="timer-2">Próxima etapa em <strong>10</strong> s</span></div>
+              <div class="step-top"><span class="step-number">03</span><div><h3>Deixe like neste vídeo</h3><p>Curta o primeiro vídeo indicado.</p></div></div>
+              <div class="step-actions"><a class="button secondary" href="https://youtu.be/EHgSz0HX8A8?is=dQMn1tE22q8RmNg1" target="_blank" rel="noopener noreferrer" tabindex="-1">Abrir vídeo <span aria-hidden="true">↗</span></a><span class="timer" id="timer-2">Aguarde <strong>10</strong> s</span><button class="button secondary" type="button" data-next="2" disabled>Continuar</button></div>
             </article>
             <article class="step locked" data-step="3" aria-disabled="true">
-              <div class="step-top"><span class="step-number">04</span><div><h3>Deixe like neste vídeo</h3><p>Curta o segundo vídeo indicado.</p></div></div>
-              <div class="step-actions"><a class="button secondary" href="https://youtu.be/uI0Gu9W3r2k?is=MuzbybfFiy8e9hjq" target="_blank" rel="noopener noreferrer" tabindex="-1">Abrir vídeo <span aria-hidden="true">↗</span></a><span class="timer" id="timer-3">Próxima etapa em <strong>10</strong> s</span></div>
+              <div class="step-top"><span class="step-number">04</span><div><h3>Comente neste vídeo</h3><p>Deixe um comentário no primeiro vídeo.</p></div></div>
+              <div class="step-actions"><a class="button secondary" href="https://youtu.be/EHgSz0HX8A8?is=dQMn1tE22q8RmNg1" target="_blank" rel="noopener noreferrer" tabindex="-1">Abrir vídeo <span aria-hidden="true">↗</span></a><span class="timer" id="timer-3">Aguarde <strong>10</strong> s</span><button class="button secondary" type="button" data-next="3" disabled>Continuar</button></div>
+            </article>
+            <article class="step locked" data-step="4" aria-disabled="true">
+              <div class="step-top"><span class="step-number">05</span><div><h3>Deixe like neste vídeo</h3><p>Curta o segundo vídeo indicado.</p></div></div>
+              <div class="step-actions"><a class="button secondary" href="https://youtu.be/uI0Gu9W3r2k?is=MuzbybfFiy8e9hjq" target="_blank" rel="noopener noreferrer" tabindex="-1">Abrir vídeo <span aria-hidden="true">↗</span></a><span class="timer" id="timer-4">Aguarde <strong>10</strong> s</span><button class="button secondary" type="button" data-next="4" disabled>Liberar acesso</button></div>
             </article>
           </div>
           <p class="sr-only" id="live-status" aria-live="polite"></p>
@@ -191,7 +195,7 @@
 
   <script>
     (() => {
-      const total = 4;
+      const total = 5;
       const duration = 10;
       const steps = [...document.querySelectorAll('.step')];
       const progressLabel = document.getElementById('progress-label');
@@ -224,29 +228,44 @@
         step.classList.add('active');
         step.removeAttribute('aria-disabled');
         const link = step.querySelector('a');
+        const nextButton = step.querySelector('[data-next]');
         link.removeAttribute('tabindex');
         link.classList.remove('secondary');
         updateProgress();
-        liveStatus.textContent = `Etapa ${index + 1} liberada. Faça a ação indicada; a próxima etapa começa em 10 segundos.`;
+        liveStatus.textContent = `Etapa ${index + 1} liberada. A contagem de 10 segundos começou.`;
 
         let secondsLeft = duration;
         const timerLabel = document.getElementById(`timer-${index}`);
-        timerLabel.innerHTML = `Próxima etapa em <strong>${secondsLeft}</strong> s`;
+        timerLabel.innerHTML = `Aguarde <strong>${secondsLeft}</strong> s`;
         timerId = window.setInterval(() => {
           secondsLeft -= 1;
           if (secondsLeft > 0) {
-            timerLabel.innerHTML = `Próxima etapa em <strong>${secondsLeft}</strong> s`;
+            timerLabel.innerHTML = `Aguarde <strong>${secondsLeft}</strong> s`;
             return;
           }
           window.clearInterval(timerId);
           timerId = null;
-          step.classList.remove('active');
-          step.classList.add('complete');
-          step.querySelector('.step-number').textContent = '✓';
-          timerLabel.textContent = 'Concluída';
-          activateStep(index + 1);
+          timerLabel.textContent = 'Tempo concluído';
+          nextButton.disabled = false;
+          nextButton.classList.remove('secondary');
+          nextButton.textContent = index === total - 1 ? 'Liberar acesso' : 'Continuar';
+          liveStatus.textContent = index === total - 1 ? 'Tempo concluído. Toque em Liberar acesso.' : 'Tempo concluído. Toque em Continuar para ver a próxima etapa.';
         }, 1000);
       };
+
+      document.querySelectorAll('[data-next]').forEach((button) => {
+        button.addEventListener('click', () => {
+          const index = Number(button.dataset.next);
+          if (index !== activeStep || button.disabled) return;
+          button.disabled = true;
+          button.textContent = 'Concluída';
+          steps[index].classList.remove('active');
+          steps[index].classList.add('complete');
+          steps[index].querySelector('.step-number').textContent = '✓';
+          activeStep = index + 1;
+          activateStep(activeStep);
+        });
+      });
 
       document.getElementById('copy-key').addEventListener('click', async (event) => {
         const button = event.currentTarget;
