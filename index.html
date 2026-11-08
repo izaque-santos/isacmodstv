@@ -138,9 +138,9 @@
         <section class="steps-card" aria-labelledby="steps-title">
           <div class="card-head">
             <h2 id="steps-title">Etapas para continuar</h2>
-            <span class="progress-label" id="progress-label">Etapa 1 de 5</span>
+            <span class="progress-label" id="progress-label">Etapa 1 de 6</span>
           </div>
-          <div class="progress-track" role="progressbar" aria-label="Progresso das etapas" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0" id="progressbar">
+          <div class="progress-track" role="progressbar" aria-label="Progresso das etapas" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0" id="progressbar">
             <div class="progress-fill" id="progress-fill"></div>
           </div>
           <div class="step-list" id="step-list">
@@ -153,16 +153,20 @@
               <div class="step-actions"><a class="button secondary" href="https://chat.whatsapp.com/H6weaa0g3KjLPAWyqgXDh8?s=cl&amp;p=a&amp;iam=2" target="_blank" rel="noopener noreferrer" tabindex="-1">Abrir grupo <span aria-hidden="true">↗</span></a><span class="timer" id="timer-1">Toque em Abrir grupo para iniciar</span><button class="button secondary" type="button" data-next="1" disabled>Continuar</button></div>
             </article>
             <article class="step locked" data-step="2" aria-disabled="true">
-              <div class="step-top"><span class="step-number">03</span><div><h3>Deixe like neste vídeo</h3><p>Curta o primeiro vídeo indicado.</p></div></div>
-              <div class="step-actions"><a class="button secondary" href="https://youtu.be/EHgSz0HX8A8?is=dQMn1tE22q8RmNg1" target="_blank" rel="noopener noreferrer" tabindex="-1">Abrir vídeo <span aria-hidden="true">↗</span></a><span class="timer" id="timer-2">Toque em Abrir vídeo para iniciar</span><button class="button secondary" type="button" data-next="2" disabled>Continuar</button></div>
+              <div class="step-top"><span class="step-number">03</span><div><h3>Siga também o canal do WhatsApp</h3><p>Acompanhe as atualizações pelo canal.</p></div></div>
+              <div class="step-actions"><a class="button secondary" href="https://whatsapp.com/channel/0029Vb8vhFa4IBh700OoQv2R" target="_blank" rel="noopener noreferrer" tabindex="-1">Abrir canal <span aria-hidden="true">↗</span></a><span class="timer" id="timer-2">Toque em Abrir canal para iniciar</span><button class="button secondary" type="button" data-next="2" disabled>Continuar</button></div>
             </article>
             <article class="step locked" data-step="3" aria-disabled="true">
-              <div class="step-top"><span class="step-number">04</span><div><h3>Comente neste vídeo</h3><p>Deixe um comentário no primeiro vídeo.</p></div></div>
+              <div class="step-top"><span class="step-number">04</span><div><h3>Deixe like neste vídeo</h3><p>Curta o primeiro vídeo indicado.</p></div></div>
               <div class="step-actions"><a class="button secondary" href="https://youtu.be/EHgSz0HX8A8?is=dQMn1tE22q8RmNg1" target="_blank" rel="noopener noreferrer" tabindex="-1">Abrir vídeo <span aria-hidden="true">↗</span></a><span class="timer" id="timer-3">Toque em Abrir vídeo para iniciar</span><button class="button secondary" type="button" data-next="3" disabled>Continuar</button></div>
             </article>
             <article class="step locked" data-step="4" aria-disabled="true">
-              <div class="step-top"><span class="step-number">05</span><div><h3>Deixe like neste vídeo</h3><p>Curta o segundo vídeo indicado.</p></div></div>
-              <div class="step-actions"><a class="button secondary" href="https://youtu.be/uI0Gu9W3r2k?is=MuzbybfFiy8e9hjq" target="_blank" rel="noopener noreferrer" tabindex="-1">Abrir vídeo <span aria-hidden="true">↗</span></a><span class="timer" id="timer-4">Toque em Abrir vídeo para iniciar</span><button class="button secondary" type="button" data-next="4" disabled>Liberar acesso</button></div>
+              <div class="step-top"><span class="step-number">05</span><div><h3>Comente neste vídeo</h3><p>Deixe um comentário no primeiro vídeo.</p></div></div>
+              <div class="step-actions"><a class="button secondary" href="https://youtu.be/EHgSz0HX8A8?is=dQMn1tE22q8RmNg1" target="_blank" rel="noopener noreferrer" tabindex="-1">Abrir vídeo <span aria-hidden="true">↗</span></a><span class="timer" id="timer-4">Toque em Abrir vídeo para iniciar</span><button class="button secondary" type="button" data-next="4" disabled>Continuar</button></div>
+            </article>
+            <article class="step locked" data-step="5" aria-disabled="true">
+              <div class="step-top"><span class="step-number">06</span><div><h3>Deixe like neste vídeo</h3><p>Curta o segundo vídeo indicado.</p></div></div>
+              <div class="step-actions"><a class="button secondary" href="https://youtu.be/uI0Gu9W3r2k?is=MuzbybfFiy8e9hjq" target="_blank" rel="noopener noreferrer" tabindex="-1">Abrir vídeo <span aria-hidden="true">↗</span></a><span class="timer" id="timer-5">Toque em Abrir vídeo para iniciar</span><button class="button secondary" type="button" data-next="5" disabled>Liberar acesso</button></div>
             </article>
           </div>
           <p class="sr-only" id="live-status" aria-live="polite"></p>
@@ -195,7 +199,7 @@
 
   <script>
     (() => {
-      const total = 5;
+      const total = 6;
       const duration = 10;
       const steps = [...document.querySelectorAll('.step')];
       const progressLabel = document.getElementById('progress-label');
